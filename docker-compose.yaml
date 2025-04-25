@@ -1,0 +1,16 @@
+services:
+  ubuntu_2404:
+    image: ubuntu_2404_dev:latest
+    restart: always
+    container_name: "ubuntu_2404_container"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - USER=${USER}
+        - PASSWORD=${PASSWORD}
+        - GIT_EMAIL=${GIT_EMAIL}
+        - GIT_NAME=${GIT_NAME}
+    tty: true
+    volumes:
+      - ./share:/share

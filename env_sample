@@ -1,0 +1,4 @@
+USER=developer
+PASSWORD=password
+GIT_EMAIL=<mailaddress>
+GIT_NAME="my_name"
